@@ -13,10 +13,12 @@ public class Module {
     private String prerequisite; //Disallow add when prerequisite not met?
     private String preclusion; //Account for preclusion when adding modules?
     private String corequisite; //Remind users to add corequisite modules?
-    public class semesterData {
+
+    public class semesterdata {
         private int semester;
         private Date examDate;
         private int examDuration;
+
         public class timetable {
             private String classNo;
             private int startTime;

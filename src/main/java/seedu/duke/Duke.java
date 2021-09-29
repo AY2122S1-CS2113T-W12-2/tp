@@ -1,14 +1,10 @@
 package seedu.duke;
 
-import seedu.duke.JSONParser.ReadJSONFile;
-
 import java.util.Scanner;
 
 public class Duke {
     public static void main(String[] args) {
-        System.out.println("Output: ");
-        ReadJSONFile readJSONFile = new ReadJSONFile();
-        readJSONFile.read();
+        startMessage();
     }
 
     public static void startMessage() {
