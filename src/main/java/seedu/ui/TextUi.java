@@ -1,9 +1,7 @@
 package seedu.ui;
 
 import seedu.module.Module;
-import seedu.module.Lesson;
 
-import java.time.DayOfWeek;
 import java.util.Scanner;
 
 public class TextUi {
@@ -142,30 +140,5 @@ public class TextUi {
     public static void printLocalSearchMessage() {
         System.out.println(LINE + "!WARNING! This is a local search, data might not be up to date.");
         System.out.println(LINE);
-    }
-
-    public static void printAddMessage(String moduleCode) {
-        System.out.println("Adding " + moduleCode);
-    }
-
-    public static void printLessonMessage(String lessonType) {
-        switch (lessonType) {
-        case "Lecture":
-            System.out.println("Which Lecture time slot would you like to add ?");
-            System.out.println("Lecture Time slots:");
-            break;
-        case "Tutorial":
-            System.out.println("Which Tutorial time slot would you like to add ?");
-            System.out.println("Tutorial Time slots:");
-            break;
-        default:
-            System.out.println("Which Laboratory time slot would you like to add ?");
-            System.out.println("Laboratory Time slots:");
-            break;
-        }
-    }
-
-    public static void printLessonInfo(int serial, Lesson lesson) {
-        System.out.println(serial + ": " + lesson.lessonDetails());
     }
 }

@@ -29,39 +29,8 @@ public class Semester {
         return examDuration;
     }
 
-    public void changeTimetable(ArrayList<Lesson> lessons) {
-        timetable = lessons;
-    }
-
     @Override
     public String toString() {
         return String.valueOf(semester);
-    }
-
-    public boolean isLectureExist() {
-        for (Lesson lesson : timetable) {
-            if (lesson.getLessonType().equals("Lecture")) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean isTutorialExist() {
-        for (Lesson lesson : timetable) {
-            if (lesson.getLessonType().equals("Tutorial")) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean isLabExist() {
-        for (Lesson lesson : timetable) {
-            if (lesson.getLessonType().equals("Laboratory")) {
-                return true;
-            }
-        }
-        return false;
     }
 }

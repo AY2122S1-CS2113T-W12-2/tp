@@ -14,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class NusMods {
+
     private static final String MODULE_API = "https://api.nusmods.com/v2/2021-2022/modules/";
 
     public static void searchModsOnline(String searchTerm) throws IOException {

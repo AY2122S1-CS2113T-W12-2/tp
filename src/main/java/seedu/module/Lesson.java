@@ -1,7 +1,6 @@
 package seedu.module;
 
 public class Lesson {
-    private final String GAP = ", ";
     private String classNo;
     private String startTime;
     private String endTime;
@@ -44,9 +43,5 @@ public class Lesson {
 
     public String getVenue() {
         return venue;
-    }
-
-    public String lessonDetails() {
-        return getDay() + GAP + getStartTime() + "-" + getEndTime() + GAP + getClassNo() + GAP + getVenue();
     }
 }

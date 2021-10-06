@@ -1,12 +1,14 @@
 package seedu.module;
 
+import org.apache.commons.lang3.ObjectUtils;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static org.apache.commons.text.WordUtils.wrap;
 
 public class Module {
-    private final int FINALISE_INDEX = 1;
 
     private String moduleCode;
     private String title;
@@ -64,7 +66,6 @@ public class Module {
                 return s;
             }
         }
-        //What is the point of this? Shouldn't we just print out an error
         return new Semester();
     }
 
