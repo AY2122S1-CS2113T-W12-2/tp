@@ -27,7 +27,7 @@ public class ModStorage {
         StringBuffer response = new StringBuffer();
         while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);
-            String path = System.getProperty("user.dir") + "data/Modules/" + moduleCode + ".json";
+            String path = System.getProperty("user.dir") + "/data/Modules/" + moduleCode + ".json";
             createModJson(path);
             addToFile(inputLine, path);
         }
@@ -59,7 +59,7 @@ public class ModStorage {
     }
 
     public static void searchModsOffline(String searchTerm, SearchFlags searchFlags) {
-        File dir = new File(System.getProperty("user.dir") + "data/Modules/");
+        File dir = new File(System.getProperty("user.dir") + "/data/Modules/");
         File[] fileList = dir.listFiles();
         if (fileList != null) {
             try {
@@ -95,7 +95,7 @@ public class ModStorage {
     }
 
     public static Module loadModInfo(String moduleCode) throws IOException {
-        File file = new File(System.getProperty("user.dir") + "data/Modules/" + moduleCode + ".json");
+        File file = new File(System.getProperty("user.dir") + "/data/Modules/" + moduleCode + ".json");
         InputStream inputStream = new ByteArrayInputStream(Files.readAllBytes(file.toPath()));
         JsonReader reader = new JsonReader(new InputStreamReader(inputStream));
         return new Gson().fromJson(reader, Module.class);
