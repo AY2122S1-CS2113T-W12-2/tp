@@ -16,7 +16,7 @@ import seedu.timetable.Timetable;
 
 public class TimetableStorageTest {
 
-    String path = "data/testSave.json";
+    String path = System.getProperty("user.dir") + "data/testSave.json";
 
     @Test
     public void loadSchedule_invalidFilePath_returnsNewTimetable() throws Exception {

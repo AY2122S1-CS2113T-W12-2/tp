@@ -9,8 +9,8 @@ import seedu.timetable.Timetable;
 import seedu.ui.TextUi;
 
 public class Duke {
-    private static String path = "data/Modules.json";
-    private static String timetablePath = "data/timetable.json";
+    private static String path = System.getProperty("user.dir") + "data/Modules.json";
+    private static String timetablePath = System.getProperty("user.dir") + "data/timetable.json";
     public static Timetable timetable;
     public static TimetableStorage timetableStorage;
     public static CommandParser commandParser = new CommandParser();
