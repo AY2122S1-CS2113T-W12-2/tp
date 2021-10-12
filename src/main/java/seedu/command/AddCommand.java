@@ -48,11 +48,7 @@ public class AddCommand extends Command {
         ArrayList<Lesson> tutorial;
         ArrayList<Lesson> laboratory;
         lecture = getLessonDetails(semesterData.getTimetable(), LECTURE);
-
-        ArrayList<Lesson> tutorial;
         tutorial = getLessonDetails(semesterData.getTimetable(), TUTORIAL);
-
-        ArrayList<Lesson> laboratory;
         laboratory = getLessonDetails(semesterData.getTimetable(), LAB);
 
         try {
