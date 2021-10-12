@@ -95,7 +95,7 @@ public class ModStorage {
     }
 
     public static Module loadModInfo(String moduleCode) throws IOException {
-        File file = new File("./data/Modules/" + moduleCode + ".json");
+        File file = new File("data/Modules/" + moduleCode + ".json");
         InputStream inputStream = new ByteArrayInputStream(Files.readAllBytes(file.toPath()));
         JsonReader reader = new JsonReader(new InputStreamReader(inputStream));
         return new Gson().fromJson(reader, Module.class);

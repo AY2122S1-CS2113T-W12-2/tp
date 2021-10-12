@@ -1,6 +1,8 @@
 package seedu.command;
 
 import org.junit.jupiter.api.Test;
+import seedu.exceptions.AddException;
+import seedu.exceptions.IntegerException;
 import seedu.module.Lesson;
 import seedu.module.Module;
 import seedu.timetable.Timetable;
@@ -55,7 +57,13 @@ class DeleteCommandTest {
 
         //Deleting test module 1 from timetable 1
         Command command1 = new DeleteCommand("CFG1002", tt1);
-        command1.execute();
+        try {
+            command1.execute();
+        } catch (AddException e) {
+            e.printMessage();
+        } catch (IntegerException e) {
+            e.printMessage();
+        }
 
         //Comparing the two timetables, flag = 1 represents they are same, and 0 represents vice versa
         int flag = tt2.compareTo(tt1);

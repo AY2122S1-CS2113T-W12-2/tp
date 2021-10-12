@@ -1,6 +1,8 @@
 package seedu.command;
 
 import org.junit.jupiter.api.Test;
+import seedu.exceptions.AddException;
+import seedu.exceptions.IntegerException;
 import seedu.module.Lesson;
 import seedu.module.Module;
 import seedu.timetable.Timetable;
@@ -52,7 +54,13 @@ class ClearCommandTest {
 
         //Clearing timetable 1
         Command command = new ClearCommand(tt1);
-        command.execute();
+        try {
+            command.execute();
+        } catch (AddException e) {
+            e.printMessage();
+        } catch (IntegerException e) {
+            e.printMessage();
+        }
 
         //Comparing the two timetables, flag = 1 represents they are same, and 0 represents vice versa
         //checking if the empty timetable (that is timetable 2 matches with timetable 1)
