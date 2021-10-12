@@ -32,9 +32,6 @@ public class AddCommand extends Command {
     }
 
     public void execute() throws AddException, IntegerException {
-        ArrayList<Lesson> lecture;
-        ArrayList<Lesson> tutorial;
-        ArrayList<Lesson> laboratory;
         Module module;
         try {
             module = NusMods.fetchModOnline(moduleCode);
@@ -44,6 +41,9 @@ public class AddCommand extends Command {
         TextUi.printAddMessage(moduleCode);
 
         Semester semesterData = module.getSemester(semester);
+        ArrayList<Lesson> lecture;
+        ArrayList<Lesson> tutorial;
+        ArrayList<Lesson> laboratory;
         lecture = getLessonDetails(semesterData.getTimetable(), LECTURE);
         tutorial = getLessonDetails(semesterData.getTimetable(), TUTORIAL);
         laboratory = getLessonDetails(semesterData.getTimetable(), LAB);

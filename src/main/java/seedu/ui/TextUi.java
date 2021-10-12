@@ -21,7 +21,7 @@ public class TextUi {
 
     public static Scanner in = new Scanner(System.in);
 
-    public static final String LINE = "__________________________________________________________________________\n";
+    public static final String LINE = "____________________________________________________________________________\n";
 
     /*------------- PRIVATE LOGGING CONSTANTS ----------- */
     private static final String LOGO = " ____        _        \n"
