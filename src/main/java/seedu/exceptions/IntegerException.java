@@ -1,6 +1,7 @@
 package seedu.exceptions;
 
 public class IntegerException extends Exception {
+
     String message;
 
     public IntegerException(String input) {

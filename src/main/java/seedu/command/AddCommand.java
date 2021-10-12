@@ -1,5 +1,6 @@
 package seedu.command;
 
+import seedu.comparator.ClassNumComparator;
 import seedu.exceptions.IntegerException;
 import seedu.module.Lesson;
 import seedu.module.Module;
@@ -11,6 +12,7 @@ import seedu.ui.TextUi;
 import seedu.exceptions.AddException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 //Indicate time clashes with current timetable in milestone v2.0 when adding lesson
 public class AddCommand extends Command {
@@ -32,6 +34,7 @@ public class AddCommand extends Command {
     }
 
     public void execute() throws AddException, IntegerException {
+
         Module module;
         try {
             module = NusMods.fetchModOnline(moduleCode);
@@ -45,7 +48,11 @@ public class AddCommand extends Command {
         ArrayList<Lesson> tutorial;
         ArrayList<Lesson> laboratory;
         lecture = getLessonDetails(semesterData.getTimetable(), LECTURE);
+
+        ArrayList<Lesson> tutorial;
         tutorial = getLessonDetails(semesterData.getTimetable(), TUTORIAL);
+
+        ArrayList<Lesson> laboratory;
         laboratory = getLessonDetails(semesterData.getTimetable(), LAB);
 
         try {
@@ -62,6 +69,7 @@ public class AddCommand extends Command {
                 completeList.add(lesson);
             }
         }
+        Collections.sort(completeList,new ClassNumComparator());
         return completeList;
     }
 }

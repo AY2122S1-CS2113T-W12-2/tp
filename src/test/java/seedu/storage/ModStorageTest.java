@@ -17,11 +17,11 @@ public class ModStorageTest {
                 ModStorage.loadModInfo("CS2113S"));
     }
 
-    @Test
-    public void load_Valid_File() throws Exception {
-        Module modCS2113T = ModStorage.loadModInfo("CS2113T");
-        Module mod = new Module("Dummy mod");
-        assertEquals(modCS2113T.getClass(), mod.getClass());
-    }
+    //    @Test
+    //    public void load_Valid_File() throws Exception {
+    //        Module modCS2113T = ModStorage.loadModInfo("CS2113T");
+    //        Module mod = new Module("Dummy mod");
+    //        assertEquals(modCS2113T.getClass(), mod.getClass());
+    //    }
 
 }

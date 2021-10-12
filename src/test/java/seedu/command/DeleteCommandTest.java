@@ -17,7 +17,7 @@ class DeleteCommandTest {
      */
 
     @Test
-    public void execute_validModuleCodeInTestTimetable_moduleShouldBeRemoved() {
+    public void execute_validModuleCodeInTestTimetable_moduleShouldBeRemoved() throws Exception {
 
 
         //Creating two test module and adding to timetable 1

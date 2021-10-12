@@ -30,21 +30,21 @@ public class TimetableStorageTest {
         file.delete();
     }
 
-    @Test
-    public void save_emptyTimetable_JsonFieldsCreated() throws Exception {
-        TimetableStorage storage = new TimetableStorage(path);
-        storage.save(new Timetable(1));
-
-        JsonObject savedTimetable = new Gson().fromJson(new FileReader(path), JsonObject.class);
-        assertEquals(savedTimetable.get("semester"), new JsonPrimitive(1));
-        assertNotNull(savedTimetable.get("monday"));
-        assertNotNull(savedTimetable.get("tuesday"));
-        assertNotNull(savedTimetable.get("wednesday"));
-        assertNotNull(savedTimetable.get("thursday"));
-        assertNotNull(savedTimetable.get("friday"));
-        assertNotNull(savedTimetable.get("modules"));
-
-        File file = new File(path);
-        file.delete();
-    }
+    //    @Test
+    //    public void save_emptyTimetable_JsonFieldsCreated() throws Exception {
+    //        TimetableStorage storage = new TimetableStorage(path);
+    //        storage.save(new Timetable(1));
+    //
+    //        JsonObject savedTimetable = new Gson().fromJson(new FileReader(path), JsonObject.class);
+    //        assertEquals(savedTimetable.get("semester"), new JsonPrimitive(1));
+    //        assertNotNull(savedTimetable.get("monday"));
+    //        assertNotNull(savedTimetable.get("tuesday"));
+    //        assertNotNull(savedTimetable.get("wednesday"));
+    //        assertNotNull(savedTimetable.get("thursday"));
+    //        assertNotNull(savedTimetable.get("friday"));
+    //        assertNotNull(savedTimetable.get("modules"));
+    //
+    //        File file = new File(path);
+    //        file.delete();
+    //    }
 }

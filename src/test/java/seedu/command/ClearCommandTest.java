@@ -17,7 +17,7 @@ class ClearCommandTest {
      */
 
     @Test
-    public void execute_timetableWith2modules_timetableShouldBeCleared() {
+    public void execute_timetableWith2modules_timetableShouldBeCleared() throws Exception {
 
         //Creating two test modules and adding to timetable 1
         Module testMod1 = new Module("CFG1002");

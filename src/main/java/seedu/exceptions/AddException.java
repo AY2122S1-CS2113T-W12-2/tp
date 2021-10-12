@@ -1,6 +1,7 @@
 package seedu.exceptions;
 
 public class AddException extends Exception {
+
     String message;
 
     public AddException(String input) {

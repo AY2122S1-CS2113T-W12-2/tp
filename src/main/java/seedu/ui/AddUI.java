@@ -81,7 +81,7 @@ public class AddUI {
 
     public void getCommand(ArrayList<Lesson> lessons,
             Timetable timetable, Module module) throws IntegerException {
-        if (isArrayExist(lessons, 1)) {
+        if (isArrayExist(lessons, 0)) {
             String select = TextUi.getLessonCommand(lessons.get(0).getLessonType());
             int indexOfLesson;
             try {
@@ -110,6 +110,7 @@ public class AddUI {
                 }
             }
         }
+
         return output;
     }
 
