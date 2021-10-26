@@ -289,7 +289,7 @@ public class Timetable implements Comparable<Timetable> {
         TimetableUI.printDaySchedule("FRI", getUserItems(friday), earliestHour, latestHour);
         TimetableUI.printDaySchedule("SAT", getUserItems(saturday), earliestHour, latestHour);
         TimetableUI.printDaySchedule("SUN", getUserItems(sunday), earliestHour, latestHour);
-        TimetableUI.printModules(modules);
+        TimetableUI.printModules(modules, this.semester);
     }
 
     public TimetableItem[] getUserItems(TimetableItem[] schedule) {
